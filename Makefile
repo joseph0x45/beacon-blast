@@ -1,6 +1,12 @@
 PORT ?= /dev/ttyACM0
 BAUD ?= 11500
 
+build:
+	idf.py build
+
+monitor:
+	idf.py --port $(PORT) monitor
+
 flash:
 	idf.py --port $(PORT) flash monitor
 
